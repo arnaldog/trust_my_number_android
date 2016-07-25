@@ -76,7 +76,9 @@ dependencies {
   compile presentationDependencies.recyclerView
   compile presentationDependencies.rxJava
   compile presentationDependencies.rxAndroid
+  compile presentationDependencies.facebook
   provided presentationDependencies.javaxAnnotation
+  compile 'com.github.tamir7.contacts:contacts:1.0.2'
 
   androidTestCompile presentationTestDependencies.mockito
   androidTestCompile presentationTestDependencies.dexmaker

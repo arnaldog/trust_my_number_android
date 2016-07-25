@@ -16,9 +16,12 @@
 package com.fernandocejas.android10.sample.presentation;
 
 import android.app.Application;
+
+import com.facebook.FacebookSdk;
 import com.fernandocejas.android10.sample.presentation.internal.di.components.ApplicationComponent;
 import com.fernandocejas.android10.sample.presentation.internal.di.components.DaggerApplicationComponent;
 import com.fernandocejas.android10.sample.presentation.internal.di.modules.ApplicationModule;
+import com.github.tamir7.contacts.Contacts;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -32,6 +35,9 @@ public class AndroidApplication extends Application {
     super.onCreate();
     this.initializeInjector();
     this.initializeLeakDetection();
+    Contacts.initialize(this);
+
+    FacebookSdk.sdkInitialize(getApplicationContext());
   }
 
   private void initializeInjector() {

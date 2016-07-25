@@ -31,4 +31,11 @@
       android:text="@string/btn_text_load_data"
       />
 
+  <com.facebook.login.widget.LoginButton
+      android:id="@+id/login_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      />
+
 </LinearLayout>
